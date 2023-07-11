@@ -1,4 +1,4 @@
-# JPRZIMBA PERSONAL WEBSITE
+# JPRZIMBA WORDPRESS THEME
 
 I have my personal website at [Vercel](https://jprdesign.vercel.app/), I'm trying to recreate it using WordPress.<br/>
 
