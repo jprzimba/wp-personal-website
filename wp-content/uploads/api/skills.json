@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "HTML5",
+        "description": "Domínio avançado de HTML5.",
+        "icon": "http:\/\/localhost:8090\/wp-content\/uploads\/api\//html-5.svg"
+    },
+    {
+        "id": 2,
+        "title": "CSS",
+        "description": "Ampla experiência com CSS e pré-processadores como SASS.",
+        "icon": "http:\/\/localhost:8090\/wp-content\/uploads\/api\/css-3.svg"
+    },
+    {
+        "id": 3,
+        "title": "JavaScript",
+        "description": "Conhecimento profundo em JavaScript e ES6+.",
+        "icon": "http:\/\/localhost:8090\/wp-content\/uploads\/api\/javascript.svg"
+    },
+    {
+        "id": 4,
+        "title": "Next.js",
+        "description": "Experiência com o framework Next.js.",
+        "icon": "http:\/\/localhost:8090\/wp-content\/uploads\/api\/nextjs.svg"
+    },
+    {
+        "id": 5,
+        "title": "PHP",
+        "description": "Experiêmcia com backend em PHP.",
+        "icon": "http:\/\/localhost:8090\/wp-content\/uploads\/api\/php.svg"
+    },
+    {
+        "id": 6,
+        "title": "React",
+        "description": "Familiaridade com o desenvolvimento de aplicações React.",
+        "icon": "http:\/\/localhost:8090\/wp-content\/uploads\/api\/react.svg"
+    },
+    {
+        "id": 7,
+        "title": "Tailwind CSS",
+        "description": "Amplo conhecimento e experiêmcia com Tailwind CSS.",
+        "icon": "http:\/\/localhost:8090\/wp-content\/uploads\/api\/tailwind.svg"
+    }
+]

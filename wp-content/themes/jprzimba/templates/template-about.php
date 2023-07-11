@@ -68,6 +68,11 @@ get_header(); // Include the header template
                 </li>
             </ul>
         </div>
+
+        <?php
+    // Import the skills template
+    get_template_part('templates/template-skills');
+    ?>
     </div>
 </div>
 

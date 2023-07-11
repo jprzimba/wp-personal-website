@@ -1,4 +1,7 @@
 <?php
+require_once get_template_directory() . '/inc/skills.php';
+
+
 function jprzimba_customize_register($wp_customize) {
     // Adds option to upload photo
     $wp_customize->add_setting('jprzimba_profile_image', array(
@@ -46,6 +49,7 @@ function jprzimba_customize_register($wp_customize) {
 function jprzimba_add_page_template_to_dropdown($templates) {
     $templates['templates/template-about.php'] = 'About';
     $templates['templates/template-home.php'] = 'Home';
+    $templates['templates/template-skills.php'] = 'Skills';
     return $templates;
 }
 
