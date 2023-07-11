@@ -136,6 +136,12 @@ function custom_theme_fonts() {
 }
 
 
+function import_custom_css() {
+    //CSS Files
+    wp_enqueue_style('main-css', get_template_directory_uri() . '/css/styles.css');
+}
+
+add_action('wp_enqueue_scripts', 'import_custom_css');
 add_action('wp_enqueue_scripts', 'custom_theme_fonts');
 add_action('customize_register', 'jprzimba_customize_register');
 add_filter('theme_page_templates', 'jprzimba_add_page_template_to_dropdown');

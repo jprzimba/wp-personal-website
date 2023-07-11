@@ -13,9 +13,9 @@
 <body class="bg-base-100 text-base-content">
 <header>
     <div class="container mx-auto flex md:flex-row items-center justify-between p-4">
-        <h1 class="text-xl font-bold font-teko">
+        <h1 class="text-3xl md:text-4xl font-teko">
             <a href="<?php echo esc_url(get_theme_mod('jprzimba_logo_link', home_url('/'))); ?>">
-                <?php echo esc_html(get_theme_mod('jprzimba_logo_text', get_bloginfo('name'))); ?>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-orange-500 shadow-fire"><?php echo esc_html(get_theme_mod('jprzimba_logo_text', get_bloginfo('name'))); ?></span>
             </a>
         </h1>
 
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <nav id="mobile-menu" class="md:hidden bg-base-100 w-screen h-screen fixed top-0 left-0 flex justify-center items-center">
+    <nav id="mobile-menu" class="md:hidden bg-base-100 w-screen h-screen fixed top-0 left-0 flex justify-center items-center overflow-hidden">
         <button id="menu-close" class="absolute top-4 right-6 text-gray-600 hover:text-gray-900">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
