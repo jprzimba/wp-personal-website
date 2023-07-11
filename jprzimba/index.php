@@ -1,5 +1,5 @@
 <?php
-get_header(); // Inclui o cabeçalho do tema
+get_header(); // Includes theme header
 ?>
 
 <main id="primary" class="site-main">
@@ -30,6 +30,6 @@ get_header(); // Inclui o cabeçalho do tema
 </main>
 
 <?php
-get_footer(); // Inclui o rodapé do tema
+get_footer(); // Includes theme footer
 ?>
 

@@ -8,12 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title><?php echo wp_get_document_title(); ?></title>
 
-    <?php wp_head(); // Função necessária para incluir scripts e estilos do WordPress ?>
+    <?php wp_head(); // Necessary function to include WordPress scripts and styles ?>
 </head>
 <body class="bg-base-100 text-base-content">
 <header>
     <div class="container mx-auto flex md:flex-row items-center justify-between p-4">
-        <h1 class="text-xl font-bold">
+        <h1 class="text-xl font-bold font-teko">
             <a href="<?php echo esc_url(get_theme_mod('jprzimba_logo_link', home_url('/'))); ?>">
                 <?php echo esc_html(get_theme_mod('jprzimba_logo_text', get_bloginfo('name'))); ?>
             </a>

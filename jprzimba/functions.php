@@ -1,50 +1,50 @@
 <?php
 function jprzimba_customize_register($wp_customize) {
-    // Adiciona a opção para fazer upload da foto
+    // Adds option to upload photo
     $wp_customize->add_setting('jprzimba_profile_image', array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'jprzimba_profile_image', array(
-        'label' => 'Foto',
+        'label' => 'Profile Photo',
         'section' => 'jprzimba_header_options',
         'settings' => 'jprzimba_profile_image',
     )));
 
-    // Adiciona uma seção para as opções do cabeçalho
+    //Adds a section for header options
     $wp_customize->add_section('jprzimba_header_options', array(
-        'title' => 'Opções do Cabeçalho',
+        'title' => 'Header Settings',
         'priority' => 30,
     ));
 
-    // Adiciona a opção para personalizar o texto do logo
+    // Adds option to customize logo text
     $wp_customize->add_setting('jprzimba_logo_text', array(
-        'default' => 'Nome do Site',
+        'default' => 'Website Name',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
     $wp_customize->add_control('jprzimba_logo_text', array(
-        'label' => 'Texto do Logo',
+        'label' => 'Logo Text',
         'section' => 'jprzimba_header_options',
         'type' => 'text',
     ));
 
-    // Adiciona a opção para personalizar o link do logo
+    // Adds option to customize logo link
     $wp_customize->add_setting('jprzimba_logo_link', array(
         'default' => home_url('/'),
         'sanitize_callback' => 'esc_url_raw',
     ));
 
     $wp_customize->add_control('jprzimba_logo_link', array(
-        'label' => 'Link do Logo',
+        'label' => 'Logo Link',
         'section' => 'jprzimba_header_options',
         'type' => 'text',
     ));
 }
 
 function jprzimba_add_page_template_to_dropdown($templates) {
-    $templates['page-home.php'] = 'Página Inicial';
+    $templates['/pages/home.php'] = 'Home';
     return $templates;
 }
 
@@ -65,22 +65,22 @@ function jprzimba_custom_title_tag($title, $sep) {
     return $title;
 }
 
-// Função para registrar as configurações personalizadas
+// Function to register custom settings
 function custom_theme_settings_register($wp_customize) {
-    // Seção para as configurações de tema
+    // Section for theme settings
     $wp_customize->add_section('theme_settings', array(
-        'title' => 'Configurações do Tema',
+        'title' => 'Theme Settings',
         'priority' => 30,
     ));
 
-    // Campo para selecionar o tema
+    // Field to select theme
     $wp_customize->add_setting('selected_theme', array(
         'default' => 'light',
         'transport' => 'refresh',
     ));
 
     $wp_customize->add_control('selected_theme', array(
-        'label' => 'Selecionar tema',
+        'label' => 'Select Theme',
         'section' => 'theme_settings',
         'type' => 'select',
         'choices' => array(
@@ -117,6 +117,26 @@ function custom_theme_settings_register($wp_customize) {
     ));
 }
 
+// Add a new custom font
+function custom_theme_fonts() {
+    // Loads the Teko font
+    // Teko
+    wp_enqueue_style('font-teko', get_theme_file_uri('/fonts/teko/Regular.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-teko-light', get_theme_file_uri('/fonts/teko/Light.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-teko-medium', get_theme_file_uri('/fonts/teko/Medium.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-teko-semibold', get_theme_file_uri('/fonts/teko/SemiBold.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-teko-bold', get_theme_file_uri('/fonts/teko/Bold.ttf'), array(), '1.0', 'all');
+
+    // Poppins
+    wp_enqueue_style('font-poppins', get_theme_file_uri('/fonts/poppins/Regular.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-poppins-light', get_theme_file_uri('/fonts/poppins/Light.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-poppins-medium', get_theme_file_uri('/fonts/poppins/Medium.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-poppins-semibold', get_theme_file_uri('/fonts/poppins/SemiBold.ttf'), array(), '1.0', 'all');
+    wp_enqueue_style('font-poppins-bold', get_theme_file_uri('/fonts/poppins/Bold.ttf'), array(), '1.0', 'all');
+}
+
+
+add_action('wp_enqueue_scripts', 'custom_theme_fonts');
 add_action('customize_register', 'jprzimba_customize_register');
 add_filter('theme_page_templates', 'jprzimba_add_page_template_to_dropdown');
 add_action('customize_register', 'custom_theme_settings_register');
